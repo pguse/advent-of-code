@@ -1,6 +1,7 @@
 lengths = [14,58,0,116,179,16,1,104,2,254,167,86,255,55,122,244]
 inFile = open("puzzleLengths.txt",'r')
-ascii_lengths = [ord(i) for i in inFile.read()] + [17,31,73,47,23]
+#ascii_lengths = [ord(i) for i in inFile.read()] + [17,31,73,47,23]
+ascii_lengths = [17,31,73,47,23]
 inFile.close()
 
 def product(list_of_lengths):
@@ -60,11 +61,11 @@ dHash = denseHash(knotHash(ascii_lengths))
 hexList = []
 for n in dHash:
     hexList.append(hex(n))
-print(hexList)
+#print(hexList)
 hexString = ""
 for element in hexList:
     if len(element) == 4:
         hexString = hexString + element[2:]
     else:
         hexString = hexString + "0" + element[2]
-print(hexString)
+#print(hexString)
